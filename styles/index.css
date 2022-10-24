@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* ------------------------ Start of Global ------------------------ */
+body{
+    overflow-x: hidden;
+}
+/* Nav Start */
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #4d4d4d;}
+.navbar-nav > li > .dropdown-menu >.dropdown-item, .navbar-nav > li > .dropdown-menu { 
+    background-color: #343a40; 
+    color: #FFF;
+}
+.navbar-nav > li > .dropdown-menu >.dropdown-item:hover{
+    background-color: #4d4d4d;
+    transition: 0.5s;
+}
+/* Nav End */
+/* Below makes the width of the newsletter input to 50% for bigger screens */
+@media(min-width: 768px){
+    .news-input{
+        width: 50%;
+    }
+}
+.sg-logo{
+        height:60rem;
+        width: auto;
+}
+    
+.newsletter{
+        background-image:url('../images/Starfield.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+/* footer */
+footer {
+    background: #212529;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+footer  a:hover, a:focus {
+    text-decoration: none;
+    color: #ddd;
+}
+
+footer .social {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer .social .icon{
+    font-size: 1rem; 
+    color: #eee;
+    padding: 1rem;
+}
+/* ------------------------ End of Global ------------------------ */
+/* ------------------------ index.html ------------------------ */
+.hero-index{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/hero-bg.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Carousel Start */
+#indexCarousel{
+    
+    height: 10%;
+    width: auto;
+
+}
+.carousel .item {
+    height: 300px;
+}
+  
+.item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
+}
+/* Carousel End */
+
+.sg-our-games{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/our-games.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    min-height: 680px;
+}
+.sg-our-games h2>span{
+    color: white;
+    text-shadow: #ffc107 1px 1px 3px ;
+}
+.card1-index{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/AsciisQuest-logo.png');
+    
+    background-repeat: no-repeat;
+    
+}
+.card2-index{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/game2-boxart.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Start of Animations */
+h1, h2, h3, p:not(.footer), .card1-index, .card2-index, button, img{
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.sg-span-title{
+    overflow: hidden;
+    border-right: .15em solid #ffc107;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: blink-caret 1s step-end infinite;
+    animation-delay: 3s;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffc107 }
+}
+/* End of Animations */
+/* ------------------------ End of Index ------------------------ */
+/* ------------------------  about.html ------------------------ */
+.hero-about{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/about-bg.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+/* ------------------------ End of About ------------------------ */
+/* ------------------------  events.html ------------------------ */
+.hero-events{
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/events-bg.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+/* ------------------------ End of events ------------------------ */

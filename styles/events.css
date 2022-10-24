@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* Page wide */
+#cal-wrap * { font-family: arial, sans-serif; }
+.ninja { display: none !important; }
+
+/* Calendar Container */
+#cal-wrap {
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Month/Year Dropdowns */
+#cal-date { display: flex; }
+#cal-mth, #cal-yr {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: 0;
+  background-color: #212529;
+  color: white;
+}
+
+/* Calendar Body */
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+#calendar tr.head td {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: #212529;
+  padding: 15px;
+  text-align: center;
+}
+#calendar tr.day td {
+  border: 3px solid #212529;
+  width: 14.28%;
+  padding: 15px 5px;
+  vertical-align: top;
+}
+#calendar tr.day td:hover {
+  background: #ffc107;
+  cursor: pointer;
+}
+#calendar tr td.blank {
+  background: #212529;
+}
+#calendar tr td.today {
+  background: #198754;
+}
+#calendar .dd {
+  font-size: 1.2em;
+  color: white;
+}
+#calendar .evt {
+  margin-top: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  overflow: hidden;
+  color: #ff5d5d;
+}
+/* END Calendar Body */
+
+/* Event Form */
+#cal-event {
+  padding: 15px;
+  margin-top: 20px;
+  background: #212529;
+}
+#cal-event h1 {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+#evt-date {
+  color: white;
+  margin: 10px 0;
+}
+#cal-event textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  min-height: 100px;
+}
+#cal-event input[type=button], #cal-event input[type=submit] {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.2em;
+  border: 0;
+  background: #ea4c4c;
+  color: #fff;
+}
+/* END Event Form */
+
+/* Countdown Timer */
+#countdown-banner {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+/* END Countdown Timer */

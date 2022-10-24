@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/forms.css">
+    <script>
+        var password; 
+        var realpass="JohnAbbott"; 
+        password=prompt("Enter Password : ", "your password here"); 
+        while(password !== realpass){
+            alert('Invalid Password! Try again!'); 
+            password=prompt("Enter Password : ", "your password here");
+        } 
+    </script>
+    <script src="scripts/fetch_contact.js"></script>
+    <script src="scripts/fetch_email.js"></script>
+    <script src="scripts/fetch_application.js"></script>
+
+    <title>Admin</title>
+    <style>
+        th{
+            color:#50C7C7;
+        }
+        body{
+            text-align: left;
+            background-color: #000;
+            color:white;
+        }
+        .center-admin{
+            margin-top:50px;
+        }
+        .btn-secondary{
+            width:220px;
+            margin:10px;
+        }
+        td, th {
+            border: 1px solid #50C7C7;
+            width:210px;
+        }
+        #contact{
+            text-align: center;
+        }
+
+
+      
+        
+    </style>
+</head>
+<body>
+    <div class="center-admin container">
+        <div id="tableData"></div>
+        <br/>
+        
+        <input type="button" class="btn btn-secondary" id = "contacts" name = "contacts" value = "Fetch the contacted persons" onclick="fetchContacts();"><br/>
+        <input type="button" class="btn btn-secondary" id = "applications" name = "applications" value = "Fetch all applications" onclick="fetchApplications();"><br/>
+        <input type="button" class="btn btn-secondary" id = "emails" name = "emails" value = "Fetch all emails" onclick="fetchEmails();"><br/><br/>
+        <h5 class="green">Press a button to fetch the data</h5>
+    </div>
+</body>
+</html>

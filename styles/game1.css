@@ -1,0 +1,461 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    color: white;
+}
+
+/* NAVBAR */
+.sg-navbar{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width : 992px) {
+    .navbar-collapse {
+    background: black;
+    color: white;
+    opacity: 0.7;
+    text-align: center;
+  }
+}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #4d4d4d;}
+.navbar-nav > li > .dropdown-menu >.dropdown-item, .navbar-nav > li > .dropdown-menu { 
+    background-color: #343a40; 
+    color: #FFF;
+}
+.navbar-nav > li > .dropdown-menu >.dropdown-item:hover{
+    background-color: #4d4d4d;
+    transition: 0.5s;
+}
+/* Nav End */
+/* SECTION 1 - VIDEO SHOWCASE */
+.videoshowcase{
+    background-color: black;
+}
+.videoshowcase video {
+    /* aspect-ratio: auto 640 / 360; */
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.sg-v-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+}
+.sg-v-text{
+    position: relative;
+    margin-bottom: -110px;
+    transform: translateY(-300%)
+}
+
+#drawing0 {
+    height: auto;
+    width: 40%;
+    min-width: 200px;
+}
+
+#countdown {
+    display: inline;
+    position: absolute;
+    margin-left: 2px;
+    font-size: 1.8rem;
+    font-weight: 550;
+}
+
+/* SECTION 2 */
+.sg-hero-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/IndieBackground.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.sg-hero-1 h1{
+    padding: 5rem 0 0 0;
+}
+
+#drawing {
+    height: auto;
+    width: 50%;
+    float: right;
+}
+
+/* SECTION 3 */
+.sg-hero-2{
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+.section-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/InsidePool.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#drawing2 {
+    float: left;
+    height: auto;
+    width: 25%;
+    min-width: 200px;
+    padding: 10px;
+}
+
+@media(min-width: 768px){
+.news-input{
+    width: 50%;
+}
+}
+.sg-logo{
+    height: 4rem;
+    width: auto;
+}
+
+.newsletter{
+    background-image:url('../images/Starfield.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+footer {
+    background: #212529;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+footer  a:hover, a:focus {
+    text-decoration: none;
+}
+
+footer .social {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer .social .icon{
+    font-size: 1rem; 
+    color: #eee;
+    padding: 1rem;
+}
+
+/* music player */
+.music-container {
+    background-color: rgb(82, 82, 82);
+    border-radius: 15px;
+    width: 330px;
+    box-shadow: 0 20px 20px 0 rgba(77, 59, 59, 0.6);
+    display: flex;
+    padding: 10px 10px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-container {
+    position: relative;
+    width: 40px;
+}
+
+.img-container::after {
+    content: '';
+    background-color: #fff;
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    left: 55%;
+    bottom: 35%;
+    border-radius: 50%;
+    transform: translate(-50%, -80%);
+}
+
+.img-container img {
+    width: inherit;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+
+    animation: rotate 3s linear infinite;
+
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: rgb(82, 82, 82);
+    border: 0;
+    color: rgb(182, 179, 179);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+    opacity: 0.8;
+}
+.action-btn:hover {
+    opacity: 1;
+}
+
+.action-btn-big {
+    color: rgb(130, 130, 130);
+    font-size: 17px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.6;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+
+.volume-slider:hover {
+    opacity: 1;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+  }
+
+.music-info {
+    background-color: rgba(82, 82, 82, 0.5);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-info h4 {
+    margin: 0;
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #757575;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Piano */
+
+#pianoBtn {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.section-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/musicWebsite.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.nowplaying {
+    font-size: 4rem;
+    line-height: 1;
+    color: #eee;
+    text-shadow: 0 0 5rem #e00000c4;
+    transition: all .07s ease;
+    min-height: 120px;
+}
+
+.keys {
+    display: block;
+    width: 100%;
+    height: 350px;
+    max-width: 880px;
+    position: relative;
+    margin: 40px auto 0;
+    cursor: none;
+}
+
+.key {
+    position: relative;
+    border: 4px solid black;
+    border-radius: .5rem;
+    transition: all .07s ease;
+    display: block;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.key:not(.sharp) {
+    float: left;
+    width: 10%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);    
+}
+
+.key.sharp {
+    position: absolute;
+    width: 6%;
+    height: 60%;
+    background: #000;
+    color: #eee;
+    top: 0;
+    z-index: 3;
+}
+
+.key[data-key="w"] {
+    left: 7%;
+}
+
+.key[data-key="e"] {
+    left: 17%;
+}
+
+.key[data-key="t"]  {
+    left: 37%;
+}
+
+.key[data-key="y"] {
+    left: 47%;
+}
+
+.key[data-key="u"] {
+    left: 57%;    
+}
+
+.key[data-key="o"] {
+    left: 77%;    
+}
+
+.key[data-key="p"] {
+    left: 87%;    
+}
+
+.playing {
+    transform: scale(.95);
+    border-color: #e91102;
+    box-shadow: 0 0 1rem #eb1c01ab;
+}
+
+.hints {
+    color: rgb(100, 100, 100);
+    text-align: center;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    bottom: 7px;
+    transition: opacity .3s ease-out;
+    font-size: 20px;
+}
+
+.keys:hover .hints {
+    opacity: 1;
+}
+
+/* 2048 */
+.section-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url('../images/2048Background.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+#field {
+    margin: auto;
+    border:10px solid rgb(96, 96, 96);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
+    table-layout: fixed;
+    height: 300px;
+}
+
+.cell {
+    padding: 5px;
+    border: 8px solid rgb(59, 59, 59);
+    border-radius: 40px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}

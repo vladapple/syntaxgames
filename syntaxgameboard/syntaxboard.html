@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Top 10 Richest People</title>
+    <!-- Bootstrap Default CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font awsome use for music box-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./admincss/boardstyle.css" />
+
+    <script>
+        function startup() {
+            var username = localStorage.getItem("username");
+            console.log(username);
+
+            document.getElementById('user').innerHTML = username;
+            // localStorage.removeItem('username');
+        }
+
+        window.addEventListener('load', startup);
+    </script>
+
+</head>
+
+<body>
+    <!-- Header and Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top nav-fill w-100">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand"><img src="../images/SyntaxGames-logos_white_banner.png"
+                    alt="logo-banner" style="height:4rem;" class="sg-logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="./syntaxboardjquery.html" class="nav-link">JQBoard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Logout</a>
+                    </li>
+                    <li class="nav-item menu">
+                        <i class="fa-solid fa-user"></i><span id="user"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Syntax Games Board</h1>
+        <div class="wrapper">
+            <div class="list">
+                <h2>To Do</h2>
+                <div id="todo" class="listitems">
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 1</div>
+                    </div>
+
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 2</div>
+                    </div>
+
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 3</div>
+                    </div>
+                </div>
+
+                <!-- Add Button Group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(0)">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="item">Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(0)">
+                        <i class="fa-solid fa-check"></i><span class="item">Save</span>
+                    </div>
+                    <div class="add-btn-bin" ondrop="drop(event,0)" ondragover="allowDrop(event)"> <i class="fa-solid fa-trash-can"></i></div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </div>
+            <div class="list">
+                <h2>In Progress</h2>
+                <div id="progress" class="listitems">
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 4</div>
+                    </div>
+
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 5</div>
+                    </div>
+                </div>
+                <!-- Add Button Group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(1)">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="item">Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(1)">
+                        <i class="fa-solid fa-check"></i><span class="item">Save</span>
+                    </div>
+                    <div class="add-btn-bin" ondrop="drop(event, 1)" ondragover="allowDrop(event)"> <i
+                            class="fa-solid fa-trash-can"></i></div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </div>
+            <div class="list">
+                <h2>In Review</h2>
+                <div id="review" class="listitems">
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 6</div>
+                    </div>
+
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 7</div>
+                    </div>
+                </div>
+                <!-- Add Button Group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(2)">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="item">Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(2)">
+                        <i class="fa-solid fa-check"></i><span class="item">Save</span>
+                    </div>
+                    <div class="add-btn-bin" ondrop="drop(event, 2)" ondragover="allowDrop(event)"> <i
+                            class="fa-solid fa-trash-can"></i></div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </div>
+            <div class="list">
+                <h2>Completed</h2>
+                <div id="complete" class="listitems">
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 8</div>
+                    </div>
+
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 9</div>
+                    </div>
+
+                    <div class="card" draggable="true">
+                        <div class="title">Task number 10</div>
+                    </div>
+                </div>
+                <!-- Add Button Group -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(3)">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="item">Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(3)">
+                        <i class="fa-solid fa-check"></i><span class="item">Save</span>
+                    </div>
+                    <div class="add-btn-bin" ondrop="drop(event, 3)" ondragover="allowDrop(event)"> <i
+                            class="fa-solid fa-trash-can"></i></div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="./adminjs/board.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap+CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/game1.css">
+    <!-- cdn Bootrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Favicon–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_white.png" />
+    <!-- Music Player -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ascii's Quest</title>
+</head>
+
+<body>
+    <div class="site">
+
+
+        <!-- Header and Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top sg-navbar">
+            <div class="container">
+                <!-- <a href="#" class="navbar-brand">Logo Placeholder</a> -->
+                <a href="../index-fr.html" class="navbar-brand"><img src="../images/SyntaxGames-logos_white_banner.png"
+                        alt="syntax logo" class="sg-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span lang="en">Jeux </span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="jeux1.html">Ascii's Quest</a>
+                                <a class="dropdown-item" href="jeux2.html">Monster Hunter</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../contact-fr.html" class="nav-link">
+                                <span lang="en">Contactez-nous</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../about-fr.html" class="nav-link">
+                                <span lang="en">À propos</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="game1.html" class="nav-link">Anglais/English</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero/Showcase Section -->
+        <section class="videoshowcase">
+            <div>
+                <!--<image src="../images/GifGame1.gif" alt="GIF of game 1"/>-->
+                <video width="640" height="360" muted="muted" loop autoplay>
+                    <source src="../videos/backgroundAnimated.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="sg-v-overlay"></div>
+            <div class="sg-v-text">
+                <img id="drawing0" src="../images/AsciisQuest-logo.png" alt="Ascii Quest logo" />
+                <h2>Pré-commandez dès Maintenant</h2>
+            </div>
+        </section>
+        <section class="text-light p-5 text-center text-sm-start sg-hero-1 img-fluid">
+            <div class="container">
+                <div>
+                    <div>
+                        <h1>Ascii's Quest</h1>
+                    </div>
+                    <p class="pt-5">
+                        Ascii's Quest est un hybride d'un jeu de rôle 2D et d'une simulation de vie à propos d'être
+                        tiraillé entre les exigences de la vie d'adulte et la nostalgie d'être un enfant insouciant.
+                        C'est un mélange de gameplay social de style Persona avec Kingdom Hearts comme l'action dans un
+                        monde 2D,
+                        avec des influences telles que Final Fantasy 9 et Dragon Ball.
+
+                    </p>
+                    <img id="drawing" src="../images/drawing.avif" alt="drawing" />
+                    <p class="pt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis fugit consectetur
+                        inventore necessitatibus quibusdam animi, doloribus perferendis officia eos facere quo ratione
+                        aperiam voluptate iure cumque cupiditate molestiae voluptatibus? Corporis?
+                    </p>
+                    <br />
+                    <!-- Music Player -->
+                    <h3>Découvrez notre bande originale!</h3>
+                    <div class="music-container">
+                        <div class="music-info">
+                            <h4 id="title">piano</h4>
+                            <div class="progress-container">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <audio src="../Music_Player_Smaller/sounds/test1.mp3" id="audio"></audio>
+
+                        <div class="img-container">
+                            <img src="../Music_Player_Smaller/images/test1.jpg" alt="piano1" id="cover" />
+                        </div>
+
+                        <div class="navigation">
+                            <button id="prev" class="action-btn">
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            <button id="play" class="action-btn action-btn-big">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button id="next" class="action-btn">
+                                <i class="fas fa-forward"></i>
+                            </button>
+                            <button id="volume" class="action-btn">
+                                <i class="fa fa-volume-up"></i>
+                            </button>
+                            <input type="range" class="volume-slider" id="myRange" min="0" max="50"
+                                value="45">
+                            <p><span id="volumeNum"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Section 2 -->
+        <section class="text-light p-5 text-center text-sm-start section-2 img-fluid">
+            <div class="container">
+                <div>
+                    <div>
+                        <h1>Travail en cours</h1>
+                    </div>
+                    <p class="pt-5">Nous combinons une animation 2D traditionnelle et des arrière-plans aquarelles
+                        peints à la main pour donner au jeu un aspect nostalgique unique.
+                        Bien que nous ne soyons pas contre l'utilisation de quelques astuces de la technologie de temps
+                        en temps !</p>
+                    <img id="drawing2" src="../images/drawing2.avif" alt="drawing2" />
+                    <p class="pt-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis fugit consectetur
+                        inventore necessitatibus quibusdam animi, doloribus perferendis officia eos facere quo ratione
+                        aperiam voluptate iure cumque cupiditate molestiae voluptatibus? Corporis?</p>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter DONE-->
+        <section class="p-5 text-light newsletter">
+            <div class="container">
+                <form name="frmEmails" method="post" action="emails.php">
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <h3 class="mb-3 mb-md-0">S'abonner à notre bulletin</h3>
+                        <div class="input-group news-input">
+                            <input type="text" class="form-control" placeholder="Addresse email (Example@domaine.com)"
+                                name="txtEmail" id="txtEmail">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-warning btn-lg" type="submit" name="Submit"
+                                    id="Submit">S'abonner</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- End of Newsletter  -->
+
+        <!-- Footer -->
+        <footer class="w-100 py-4 flex-shrink-0">
+            <div class="container py-4">
+                <div class="row gy-4 gx-5">
+                    <div class="col-lg-5 col-md-6">
+                        <h5 class="h2 text-white">Syntax Games.</h5>
+                        <p class="small text-muted">Engagé à créer des expériences de jeu attrayantes et favorables aux
+                            consommateurs,
+                            sans de DRM intrusifs et de monétisation prédatrice.</p>
+                        <p class="small text-muted mb-0">&copy;2022 Syntax Games. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="text-white mb-3">Liens directs</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><a href="../careers-fr.html">Profession</a></li>
+                            <li><a href="../about-fr.html">À propos</a></li>
+                            <li><a href="jeux1.html">Ascii's Quest</a></li>
+                            <li><a href="jeux2.html">Monster Hunter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="text-center">
+                            <img src="../images/SyntaxGames-logos_white_banner.png" alt="logo-white-footer"
+                                style="width:20rem;" class="img-fluid">
+                        </div>
+                        <div class="social">
+                            <i class="bi bi-facebook icon"></i>
+                            <i class="bi bi-twitter icon"></i>
+                            <i class="bi bi-google icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- End of Footer  -->
+    </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/sound2.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</body>
+
+</html>

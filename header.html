@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand"><img src="images/SyntaxGames-logos_white_banner.png"
+                alt="logo-banner" style="height:4rem;" class="sg-logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Games</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="games/game1.html">Ascii's Quest</a>
+                        <a class="dropdown-item" href="games/game2.html">Monster Hunter</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./syntaxgameboard/adminlogin.html" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a id="language-toggle" class="nav-link">French/Français</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- SCRIPTS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- dynamic language toggler -->
+    <script>
+        let path = window.location.pathname;
+        let page = path.split("/").pop();
+        page = page.substring(0, page.indexOf('.'));
+        let frPageLink = page + "-fr.html";
+        document.getElementById("language-toggle").href = frPageLink;
+    </script>
